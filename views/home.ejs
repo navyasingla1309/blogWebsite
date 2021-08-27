@@ -1,0 +1,17 @@
+<%-include('header.ejs')%>
+	<link rel = "stylesheet" href ="/styles.css">
+</head>
+<body>
+	<%-include('navbar.ejs')%>
+	<div class= "container">
+	<h1 class="text-center">Home</h1>
+	<p><%=homePage%></p>
+	<%if(head){%>
+	<%for(let i=0 ;i<=head.length-1;i++){%>
+	<h2><%=head[i]%></h2>
+	<p><%=text[i].substring(0,200)%>...<a href="/posts/<%=head[i]%>">Read more</a></p>
+	<%}%>
+	<%}%>
+	</div>
+	<button class ="btn btn-success"><a href="/add">Compose</a></button>
+	<%-include('footer.ejs')%>

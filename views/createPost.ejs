@@ -1,0 +1,22 @@
+<%-include('header.ejs')%>
+	<title>Create New Post</title>
+	<link rel = "stylesheet" href ="/styles.css">
+</head>
+<body>
+	<div class= "container">
+	<h1 class="text-center"> Compose</h1>
+	<form action = "/add" method ="post">
+		<div class="mb-3">
+		<label for= "heading" class="form-label">Title</label>
+		<input type = "text" name ="heading" class="form-control">
+		<br>
+		</div>
+		<div class="mb-3">
+		<label for= "entry" class="form-label">Post</label>
+		<textarea type="text" name ="entry" class="form-control"></textarea>
+		</div>
+		<button type="submit" class= "btn btn-dark">Add Post</button>
+		
+	</div>
+	</form>
+<%-include('footer.ejs')%>
